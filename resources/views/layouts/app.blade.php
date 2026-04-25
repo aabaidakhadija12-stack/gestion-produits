@@ -32,7 +32,7 @@
 </head>
 <body>
     <nav>
-        <a href="{{ route('produits.index') }}">🛒 GestionProduits</a>
+        <a href="{{ route('produits.index') }}"><img src="{{ asset('products.png') }}" style="height:30px; vertical-align:middle; margin-right:8px;">Gestion des Produits</a>
         <div class="nav-links">
             @auth
                 <span>{{ auth()->user()->name }}</span>

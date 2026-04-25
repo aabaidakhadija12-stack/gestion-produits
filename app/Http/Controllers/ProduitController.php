@@ -20,7 +20,7 @@ class ProduitController extends Controller
                   ->orWhere('description', 'like', "%{$s}%");
         }
 
-        $produits = $query->latest()->paginate(10)->withQueryString();
+        $produits = $query->oldest()->paginate(10)->withQueryString();
 
         return view('produits.index', compact('produits'));
     }

@@ -2,8 +2,8 @@
 
 @section('content')
 <style>
-    .form-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; max-width: 600px; }
-    .form-card h2 { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 1.5rem; }
+    .form-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; max-width: 600px;margin: 2rem auto; }
+    .form-card h2 { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 1.5rem; text-align:center ; }
     .form-group { margin-bottom: 1.2rem; }
     .form-group label { display: block; font-size: 0.9rem; font-weight: 600; color: #555; margin-bottom: 0.4rem; }
     .form-group input, .form-group textarea {
@@ -19,7 +19,7 @@
 </style>
 
 <div class="form-card">
-    <h2>✏️ Modifier : {{ $produit->nom }}</h2>
+    <h2> Modification de produit </h2>
 
     <form method="POST" action="{{ route('produits.update', $produit) }}">
         @csrf

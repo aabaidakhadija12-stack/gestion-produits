@@ -2,7 +2,7 @@
 
 @section('content')
 <style>
-    .confirm-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; max-width: 500px; text-align: center; }
+    .confirm-card { background: white; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; max-width: 500px; text-align: center; margin: 2rem auto;}
     .confirm-card .icon { font-size: 3rem; margin-bottom: 1rem; }
     .confirm-card h2 { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 0.5rem; }
     .confirm-card p { color: #666; margin-bottom: 1.5rem; }
@@ -12,9 +12,8 @@
 </style>
 
 <div class="confirm-card">
-    <div class="icon">🗑️</div>
     <h2>Confirmer la suppression</h2>
-    <p>Êtes-vous sûr de vouloir supprimer ce produit ? Cette action est irréversible.</p>
+    <p>Êtes-vous sûr de vouloir supprimer ce produit ?</p>
 
     <div class="produit-info">
         <p><strong>Nom :</strong> {{ $produit->nom }}</p>

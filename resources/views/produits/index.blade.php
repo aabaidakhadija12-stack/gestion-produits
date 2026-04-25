@@ -18,6 +18,10 @@
     .badge-ok   { background: #e8f5e9; color: #2e7d32; }
     .pagination-wrap { margin-top: 1.2rem; display: flex; justify-content: center; background-color: #fff; border-color: #1a1a2e;}
     .empty { text-align: center; padding: 3rem; color: #aaa; }
+    .pagination-wrap nav { background: transparent; }
+    .pagination-wrap .flex { background: transparent; }
+    .pagination-wrap nav > div:first-child { display: none; }
+    .pagination-wrap p {display: none !important;}
 </style>
 
 <div class="page-header">
@@ -42,7 +46,6 @@
     <table>
         <thead>
             <tr>
-                <th>#</th>
                 <th>Nom</th>
                 <th>Description</th>
                 <th>Prix</th>
@@ -53,7 +56,6 @@
         <tbody>
             @foreach($produits as $produit)
             <tr>
-                <td>{{ $produit->id }}</td>
                 <td><strong>{{ $produit->nom }}</strong></td>
                 <td>{{ Str::limit($produit->description, 60) }}</td>
                 <td>{{ number_format($produit->prix, 2) }} DH</td>
@@ -74,7 +76,7 @@
     </table>
 
     {{-- Étape 8 : Pagination 10/page --}}
-    <div class="pagination-wrap" style="background-color: #fff;">
+    <div class="pagination-wrap">
         {{ $produits->links() }}
     </div>
 @endif
